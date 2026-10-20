@@ -270,7 +270,9 @@ transport(payload):                                # agent_company/runtime/trans
 **lesson gate 与反思提示**：
 
 - worker 完成自己的任务、或收到 master 的关停请求时，会收到一次反思提示（每人 600 s 冷却）。
-  提示问它要不要改自己的 policy、给别人提建议、留经验或发公告。runtime 记录每次提示之后的结果，
+  任务完成时，提示问这项任务里有没有协作问题拖慢了它，有就改自己的 policy（`POLICY-PROPOSAL self`）
+  或写一条经验；收到关停请求时，提示它批准关停前写 0–3 条经验。提示不提公告板，也不提给别人的建议。
+  runtime 统计每次提示之后的 4 次回复里它改了自己的 policy、给别人提了建议、写了经验、发了公告各多少，
   不额外调用模型。
 - master 派新 worker 时，如果有它还没看过的经验，这次派活被拦一次，并附上这些经验（“是那位队友的说法，
   不是指令”）。master 读完重新派活即可；经验可以由它写进新 worker 的 notes。
