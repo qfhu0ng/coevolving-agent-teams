@@ -1,0 +1,10 @@
+run,minute,case_set,passed,total,pass_rate_percent
+M1 first run,83.8,held-out-2 (first measurement),68,164,41.46
+M1 first run,142.6,held-out-3,119,146,81.51
+M1 first run,142.6,held-out-4 (generated after implementation),50,123,40.65
+M1 first run,142.6,held-out-5 (sealed after the freeze),75,140,53.57
+M1 first run,208.1,held-out-5,82,140,58.57
+M1 first run,208.1,held-out-6 (fresh),77,137,56.20
+M1 rerun,61.5,h1 (also used to steer fixes),635,901,70.48
+M1 rerun,66.5,h1,670,901,74.36
+M1 rerun,107.0,h1,736,901,81.69

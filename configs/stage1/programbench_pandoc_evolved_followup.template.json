@@ -1,0 +1,62 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "Followup template: reuse one explicitly selected completed baseline Team as evidence; call StrategyOptimizer and StrategyReviewer, then dispatch one fresh candidate Team only after a completed review and supported executability. The initial design is one Single+propose pair plus standalone off/global/master Teams, five runs total; it is not four pairs. This template defaults to propose and P0-to-P1; select the authorized mode, policy version and source explicitly. No automatic adoption or continuation. Each followup requires explicit repeat_index, evolution_round and authorization.",
+  "tasks": [
+    {
+      "task_id": "jgm__pandoc.5caad90",
+      "path": "external/programbench-study/src/programbench/data/tasks/jgm__pandoc.5caad90",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "single",
+      "execution_mode": "single",
+      "policy_version": 0,
+      "assignment_policy_path": null,
+      "communication_policy_path": null
+    },
+    {
+      "name": "team_p0_propose",
+      "execution_mode": "team",
+      "policy_version": 0,
+      "assignment_policy_path": "configs/stage1/policies/fresh_p0_20261001/assignment_v000.md",
+      "communication_policy_path": "configs/stage1/policies/fresh_p0_20261001/communication_v000.md"
+    },
+    {
+      "name": "team_candidate",
+      "execution_mode": "team",
+      "policy_version": 1
+    }
+  ],
+  "provider_config": "configs/stage1/deepseek_flash.json",
+  "evolution_enabled": true,
+  "parallelism": 2,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "team_message_delivery": "between_tool_calls",
+    "runtime_disclosure": true,
+    "leader_loop_recovery": true,
+    "tool_call_cap": "disabled",
+    "role_policy_mode": "propose",
+    "observation_interval_seconds": 60,
+    "stop_hook": {
+      "reason": "Time remaining: {remaining_seconds} seconds. Continue useful work on the task within your existing role permissions. Do not end the session solely because the current implementation appears complete: compare the delivered program with the reference executable on inputs and options you have not tried yet, and address the differences and remaining issues you find. When less than 900 seconds remain, stop starting new work; make sure the delivery builds with compile.sh and all completed work is in the delivery repository, then finish.",
+      "budget_notice": "The runtime will remind you to continue if you try to finish before the wall-time allowance expires. Use the remaining time for useful work within your existing role permissions."
+    }
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "runtime": "custom_Qwen_not_official_mini_SWE",
+  "limitations": "Single is run once in the initial round and has no range update. This followup has repeat_single=false; it does not rerun Single or supply Single evidence to the optimizer/reviewer. Supplied previous-round projections, policies and review summaries may be used. Official total passed tests are primary; layers are diagnostic and token savings alone cannot accept a candidate. Unsupported/unknown executability pauses dispatch. A gain requires a separate fresh concurrent incumbent/candidate confirmation using the saved trigger threshold. At most three authorized followup rounds; no automatic adoption. Rendering or preparation is not execution authorization.",
+  "selection_protocol": "programbench_total_passed_confirmation",
+  "repeat_single": false
+}

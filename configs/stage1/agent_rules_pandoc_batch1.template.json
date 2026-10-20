@@ -1,0 +1,58 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "agent_rules_v1 batch 1: Single and the M0 Team (per-worker policies, up to 16 teammates), fresh starts, simultaneously, six hours each, 20 CPUs and 80 GiB per arm.",
+  "tasks": [
+    {
+      "task_id": "jgm__pandoc.5caad90",
+      "path": "external/programbench-study/src/programbench/data/tasks/jgm__pandoc.5caad90",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "single",
+      "execution_mode": "single",
+      "policy_version": 0,
+      "policy_package_path": "../profiles/agent_rules_package_m0.json"
+    },
+    {
+      "name": "team_m0",
+      "execution_mode": "team",
+      "policy_version": 0,
+      "policy_package_path": "../profiles/agent_rules_package_m0.json",
+      "role_policy_mode": "propose"
+    }
+  ],
+  "provider_config": "configs/stage1/deepseek_flash.json",
+  "evolution_enabled": false,
+  "parallelism": 2,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 81920,
+    "memory_swap_mb": 81920,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "team_message_delivery": "between_tool_calls",
+    "runtime_disclosure": true,
+    "leader_loop_recovery": true,
+    "tool_call_cap": "disabled",
+    "role_policy_mode": "propose",
+    "observation_interval_seconds": 60,
+    "stop_hook": {
+      "reason": "Time remaining: {remaining_seconds} seconds. Continue useful work on the task within your existing role permissions. Do not end the session solely because the current implementation appears complete: compare the delivered program with the reference executable on inputs and options you have not tried yet, and address the differences and remaining issues you find. When less than 900 seconds remain, stop starting new work; make sure the delivery builds with compile.sh and all completed work is in the delivery repository, then finish.",
+      "budget_notice": "The runtime will remind you to continue if you try to finish before the wall-time allowance expires. Use the remaining time for useful work within your existing role permissions."
+    },
+    "role_policy_protocol": "agent_rules_v1",
+    "teammate_limit": 16
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "runtime": "custom_Qwen_not_official_mini_SWE",
+  "limitations": "One concurrent batch. The official total is reported to the user, never an automatic adoption. A candidate master strategy is generated only after this batch, with separate authorization; no automatic next launch.",
+  "selection_protocol": "programbench_total_passed_confirmation",
+  "batch_index": 1
+}

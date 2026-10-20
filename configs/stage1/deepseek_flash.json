@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "max_output_tokens": 65536,
+  "request_timeout_seconds": 1800,
+  "first_progress_timeout_seconds": 300,
+  "progress_idle_timeout_seconds": 300,
+  "inspection_max_output_tokens": 32768,
+  "stream_response": true,
+  "max_attempts": 3,
+  "retry_backoff_seconds": 1.0,
+  "extra_body": {
+    "thinking": {"type": "enabled"},
+    "reasoning_effort": "high"
+  },
+  "rates": null
+}

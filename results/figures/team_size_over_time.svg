@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="820" height="400" fill="#fcfcfb"/>
+<line x1="100" x2="640" y1="260.0" y2="260.0" stroke="#e4e2dd"/><text x="92" y="264.0" text-anchor="end" font-size="11" fill="#52514e">0</text>
+<line x1="100" x2="640" y1="205.0" y2="205.0" stroke="#e4e2dd"/><text x="92" y="209.0" text-anchor="end" font-size="11" fill="#52514e">4</text>
+<line x1="100" x2="640" y1="150.0" y2="150.0" stroke="#e4e2dd"/><text x="92" y="154.0" text-anchor="end" font-size="11" fill="#52514e">8</text>
+<line x1="100" x2="640" y1="95.0" y2="95.0" stroke="#e4e2dd"/><text x="92" y="99.0" text-anchor="end" font-size="11" fill="#52514e">12</text>
+<line x1="100" x2="640" y1="40.0" y2="40.0" stroke="#e4e2dd"/><text x="92" y="44.0" text-anchor="end" font-size="11" fill="#52514e">16</text>
+<text x="100" y="18" font-size="12" fill="#52514e">active workers</text>
+<path d="M100.0,260.0 V260.0 H115.0 V40.0 H130.0 V40.0 H145.0 V40.0 H160.0 V40.0 H175.0 V40.0 H190.0 V40.0 H205.0 V246.2 H220.0 V122.5 H235.0 V53.8 H250.0 V40.0 H265.0 V40.0 H280.0 V40.0 H295.0 V136.2 H310.0 V163.8 H325.0 V191.2 H340.0 V191.2 H355.0 V177.5 H370.0 V191.2 H385.0 V163.8 H400.0 V191.2 H415.0 V163.8 H430.0 V163.8 H445.0 V191.2 H460.0 V150.0 H475.0 V150.0 H490.0 V163.8 H505.0 V150.0 H520.0 V150.0 H535.0 V191.2 H550.0 V163.8 H565.0 V150.0 H580.0 V150.0 H595.0 V136.2 H610.0" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<path d="M100.0,260.0 V260.0 H115.0 V108.8 H130.0 V40.0 H145.0 V40.0 H160.0 V40.0 H175.0 V40.0 H190.0 V40.0 H205.0 V40.0 H220.0 V40.0 H235.0 V40.0 H250.0 V40.0 H265.0 V40.0 H280.0 V40.0 H295.0 V53.8 H310.0 V177.5 H325.0 V177.5 H340.0 V150.0 H355.0 V163.8 H370.0 V136.2 H385.0 V136.2 H400.0 V122.5 H415.0 V40.0 H430.0 V40.0 H445.0 V40.0 H460.0 V246.2 H475.0" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<path d="M100.0,260.0 V260.0 H115.0 V53.8 H130.0 V53.8 H145.0 V40.0 H160.0 V40.0 H175.0 V40.0 H190.0 V40.0 H205.0 V40.0 H220.0 V40.0 H235.0 V40.0 H250.0 V40.0 H265.0 V40.0 H280.0 V232.5 H295.0 V232.5 H310.0 V232.5 H325.0 V232.5 H340.0 V232.5 H355.0 V232.5 H370.0 V246.2 H385.0 V246.2 H400.0 V246.2 H415.0 V246.2 H430.0 V246.2 H445.0 V246.2 H460.0 V246.2 H475.0 V246.2 H490.0 V246.2 H505.0 V246.2 H520.0 V246.2 H535.0 V246.2 H550.0 V246.2 H565.0 V246.2 H580.0 V246.2 H595.0 V246.2 H610.0 V246.2 H625.0" fill="none" stroke="#eb6834" stroke-width="2"/>
+<line x1="100" x2="640" y1="300" y2="300" stroke="#e4e2dd"/>
+<text x="92.0" y="304.0" text-anchor="end" font-size="11" fill="#52514e" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M0</text>
+<line x1="204.7" x2="204.7" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="323.6" x2="323.6" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="402.9" x2="402.9" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="446.6" x2="446.6" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="502.4" x2="502.4" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="521.6" x2="521.6" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="532.6" x2="532.6" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="552.1" x2="552.1" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="563.2" x2="563.2" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="574.3" x2="574.3" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="582.4" x2="582.4" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="582.9" x2="582.9" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="583.0" x2="583.0" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="588.9" x2="588.9" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="593.4" x2="593.4" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="597.5" x2="597.5" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="597.7" x2="597.7" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="598.0" x2="598.0" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="598.3" x2="598.3" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="598.5" x2="598.5" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="599.8" x2="599.8" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.0" x2="600.0" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.1" x2="600.1" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.2" x2="600.2" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.5" x2="600.5" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.7" x2="600.7" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.7" x2="600.7" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="600.9" x2="600.9" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="601.0" x2="601.0" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<line x1="601.1" x2="601.1" y1="294" y2="306" stroke="#1baf7a" stroke-width="2"/>
+<text x="650.0" y="304.0" text-anchor="start" font-size="11" fill="#52514e" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">30 Stop hook blocks</text>
+<line x1="100" x2="640" y1="322" y2="322" stroke="#e4e2dd"/>
+<text x="92.0" y="326.0" text-anchor="end" font-size="11" fill="#52514e" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M1 first run</text>
+<line x1="317.1" x2="317.1" y1="316" y2="328" stroke="#2a78d6" stroke-width="2"/>
+<text x="650.0" y="326.0" text-anchor="start" font-size="11" fill="#52514e" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">1 Stop hook block</text>
+<line x1="100" x2="640" y1="344" y2="344" stroke="#e4e2dd"/>
+<text x="92.0" y="348.0" text-anchor="end" font-size="11" fill="#52514e" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M1 rerun</text>
+<line x1="306.2" x2="306.2" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="334.8" x2="334.8" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="373.0" x2="373.0" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="412.6" x2="412.6" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="477.9" x2="477.9" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="543.7" x2="543.7" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="544.0" x2="544.0" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="568.1" x2="568.1" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="595.8" x2="595.8" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="602.4" x2="602.4" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="602.5" x2="602.5" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="602.6" x2="602.6" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="602.8" x2="602.8" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="604.9" x2="604.9" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="605.0" x2="605.0" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="605.2" x2="605.2" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="605.4" x2="605.4" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="605.4" x2="605.4" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="605.8" x2="605.8" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="606.0" x2="606.0" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="608.5" x2="608.5" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="608.5" x2="608.5" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="608.6" x2="608.6" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="608.8" x2="608.8" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.1" x2="609.1" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.1" x2="609.1" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.2" x2="609.2" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.4" x2="609.4" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.4" x2="609.4" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.5" x2="609.5" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.7" x2="609.7" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<line x1="609.7" x2="609.7" y1="338" y2="350" stroke="#eb6834" stroke-width="2"/>
+<text x="650.0" y="348.0" text-anchor="start" font-size="11" fill="#52514e" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">32 Stop hook blocks</text>
+<text x="100.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">0</text>
+<text x="190.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">60</text>
+<text x="280.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">120</text>
+<text x="370.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">180</text>
+<text x="460.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">240</text>
+<text x="550.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">300</text>
+<text x="640.0" y="362" text-anchor="middle" font-size="11" fill="#52514e">360</text>
+<text x="640" y="378" text-anchor="end" font-size="12" fill="#52514e">minutes into the 6-hour run</text>
+<text x="475.0" y="60.6" text-anchor="middle" font-size="12" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M1 first run: back to 16 after the block</text>
+<text x="475.0" y="224.2" text-anchor="start" font-size="12" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M1 rerun: 1–2 workers from 113 min</text>
+<text x="550.0" y="139.9" text-anchor="middle" font-size="12" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="4" paint-order="stroke" stroke-linejoin="round">M0: 5–9 workers</text>
+<text x="100" y="392" font-size="11" fill="#52514e">Ticks: times the Stop hook refused the master's attempt to end the session early. The M1 first run stopped at 4 h when the API balance ran out.</text>
+</svg>

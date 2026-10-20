@@ -1,0 +1,50 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "First round wave 2/4: one standalone global Team, six hours per arm, fresh P0. The complete first round is five runs: one Single plus off/global/master/propose Teams, in that wave order. Explicit repeat_index and separate authorization are required. No optimizer, reviewer, evolution, automatic repetition, resume or adoption.",
+  "tasks": [
+    {
+      "task_id": "jgm__pandoc.5caad90",
+      "path": "external/programbench-study/src/programbench/data/tasks/jgm__pandoc.5caad90",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "team_p0_global",
+      "execution_mode": "team",
+      "policy_version": 0,
+      "assignment_policy_path": "configs/stage1/policies/fresh_p0_20261001/assignment_v000.md",
+      "communication_policy_path": "configs/stage1/policies/fresh_p0_20261001/communication_v000.md"
+    }
+  ],
+  "provider_config": "configs/stage1/deepseek_flash.json",
+  "evolution_enabled": false,
+  "parallelism": 1,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "team_message_delivery": "between_tool_calls",
+    "runtime_disclosure": true,
+    "leader_loop_recovery": true,
+    "tool_call_cap": "disabled",
+    "role_policy_mode": "global",
+    "observation_interval_seconds": 60,
+    "stop_hook": {
+      "reason": "Time remaining: {remaining_seconds} seconds. Continue useful work on the task within your existing role permissions. Do not end the session solely because the current implementation appears complete: compare the delivered program with the reference executable on inputs and options you have not tried yet, and address the differences and remaining issues you find. When less than 900 seconds remain, stop starting new work; make sure the delivery builds with compile.sh and all completed work is in the delivery repository, then finish.",
+      "budget_notice": "The runtime will remind you to continue if you try to finish before the wall-time allowance expires. Use the remaining time for useful work within your existing role permissions."
+    }
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "runtime": "custom_Qwen_not_official_mini_SWE",
+  "limitations": "Single runs once initially, paired only with propose; off/global/master comparisons with that Single cross time windows. Mode ordering is descriptive. Different Team modes are separate conditions; no Single range update. Valid official zero scores remain zero and missing evaluations remain unknown. Shared resources do not imply equal tokens. A triggered confirmation uses a new concurrent Single/selected-Team pair with a new explicit repeat_index. Thresholds follow docs/stage1_single_task_plan_20261014.md. S0, each wave, confirmation and evolution require separate authorization.",
+  "selection_protocol": "programbench_total_passed_confirmation",
+  "first_round_wave": 2
+}

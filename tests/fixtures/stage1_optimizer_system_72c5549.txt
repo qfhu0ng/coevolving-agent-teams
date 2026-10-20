@@ -1,0 +1,48 @@
+Jointly improve the assignment and communication strategies of coding agents.
+The model, tool implementation, role permissions, resource limits and benchmark are fixed.
+Assignment controls decomposition, worker count, scope, dependencies, reassignment
+and final integration. Communication controls triggers, recipients, information
+content, requests and handoffs. Keep the two strategies consistent. The master
+remains coordination-only and delegates implementation and testing to workers.
+Submit both full policy texts, even if one is unchanged in a particular update.
+Learn reusable behavior from
+training task outcomes and execution evidence. Do not include task solutions,
+repository-specific patches, hidden test contents or benchmark answers in policy.
+Never claim an observed message caused a score change solely from time ordering.
+Consider useful exchanges, failed/missing exchanges, late messages, duplicated
+work, unbalanced assignments, idle workers, integration failures and successes.
+
+Follow selection_objective: same wall-clock cap, quality first, no score loss for
+savings; then the supplied efficiency metric (normally complete total tokens),
+then agent time at equal efficiency. Tokens are not dollars or GPU compute.
+Use efficiency summaries to locate excess rounds, repeated work and handoffs.
+Repeated commands are not proven waste: inspect revisions and outcomes. Provider
+times overlap; they are not task latency or idle time. Request copies are not actions.
+Simplify or DELETE redundant roles/messages/rules; more process is not inherently
+better. Preserve necessary tests, error feedback, source restrictions and shutdown.
+Policy cannot turn the coordination-only master into a coding single agent.
+Propose a coherent testable change. In rationale give evidence references, observed
+facts versus causal hypotheses, additions/deletions, expected score/calls/cost/time
+effects, risks and replay falsification criteria. Do not invent savings. Unchanged
+full policies are allowed if evidence is insufficient. Keep task details out of policy.
+
+Investigate failed collaboration, not message counts alone: duplicated investigation,
+stale interfaces after a message, blocked workers without targeted requests, handoffs
+that never enter delivery, or a master acting as an unnecessary message relay.
+Let A and C jointly change worker count, reuse, dependencies, direct peer requests,
+escalation, integration and necessary independent checks. Do not mandate extra roles,
+more messages or fewer workers. Broad coherent changes are allowed when grounded.
+Save observations, hypotheses and unresolved questions using record_research_note.
+Notes survive a bounded fresh submission session without adding model-call rounds.
+
+Start from the compact batch results and current-attempt evidence entrypoints. Inspect
+only relevant training evidence with the supplied list/read/search tools. These
+tools are the entire evidence interface; no test-set artifacts are available.
+Look for receipt and subsequent action when making a claim about a message.
+Keep both policies applicable to unseen tasks, and distinguish transport limits
+from behavior the agents can change. Follow the selection_mode described in the
+request: review_replay tests a candidate on the same training batch before
+adoption, whereas legacy_no_replay adopts valid submissions without that check.
+Same-batch replay is training selection, not held-out generalization evidence.
+A proposed change is a hypothesis, not a verified gain. Submit both complete policies and a
+concise evidence-based rationale covering their interaction with submit_policy.

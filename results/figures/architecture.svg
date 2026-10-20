@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700" role="img" aria-label="Architecture: an offline outer loop evolves the master strategy M; inside one run the master, a deterministic relay and the workers exchange policies, reminders and messages">
+  <style>
+    text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: #18212c; }
+    .t { font-weight: 700; font-size: 13px; }
+    .s { fill: #52514e; font-size: 11.5px; }
+    .bandlabel { fill: #52514e; font-weight: 700; font-size: 12.5px; }
+    .band { fill: none; stroke: #d9dee5; stroke-width: 1.5; }
+    .llm { fill: #e6eff6; stroke: #2c6a96; stroke-width: 1.4; }
+    .prog { fill: #ffffff; stroke: #6b7280; stroke-width: 1.2; }
+    .data { fill: #f6eedb; stroke: #9a6a0f; stroke-width: 1.2; }
+    .group { fill: none; stroke: #6b7280; stroke-dasharray: 5 4; stroke-width: 1.2; }
+    .lgroup { fill: none; stroke: #2c6a96; stroke-dasharray: 5 4; stroke-width: 1.2; }
+    .flow { fill: none; stroke: #4b5563; stroke-width: 1.4; }
+    .num circle { fill: #2c6a96; }
+    .num text { fill: #ffffff; font-size: 11px; font-weight: 700; text-anchor: middle; }
+  </style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+  <rect width="900" height="700" fill="#fcfcfb"/>
+
+  <rect x="8" y="8" width="884" height="142" rx="8" class="band"/>
+  <text x="22" y="31" class="bandlabel">Outer loop: evolve the master strategy M (offline, once per round)</text>
+  <rect x="22" y="44" width="186" height="86" rx="6" class="data"/>
+  <text x="115" y="67" text-anchor="middle" class="t">Run evidence (redacted)</text>
+  <text x="115" y="87" text-anchor="middle" class="s">policy versions · rule outcomes</text>
+  <text x="115" y="104" text-anchor="middle" class="s">message facts · lessons · board</text>
+  <text x="115" y="121" text-anchor="middle" class="s">official score</text>
+  <rect x="238" y="44" width="186" height="86" rx="6" class="llm"/>
+  <text x="331" y="67" text-anchor="middle" class="t">Optimizer (LLM)</text>
+  <text x="331" y="87" text-anchor="middle" class="s">rewrites both parts of M</text>
+  <text x="331" y="104" text-anchor="middle" class="s">states hypotheses and</text>
+  <text x="331" y="121" text-anchor="middle" class="s">falsifiable predictions</text>
+  <rect x="454" y="44" width="186" height="86" rx="6" class="llm"/>
+  <text x="547" y="67" text-anchor="middle" class="t">Reviewer (LLM)</text>
+  <text x="547" y="87" text-anchor="middle" class="s">judges executability</text>
+  <text x="547" y="104" text-anchor="middle" class="s">flags task-specific text</text>
+  <text x="547" y="121" text-anchor="middle" class="s">lists risks, recommends</text>
+  <rect x="670" y="44" width="208" height="86" rx="6" class="prog"/>
+  <text x="774" y="67" text-anchor="middle" class="t">Human decision</text>
+  <text x="774" y="87" text-anchor="middle" class="s">adopted → M(k+1)</text>
+  <text x="774" y="104" text-anchor="middle" class="s">one round run: M0 → M1</text>
+  <text x="774" y="121" text-anchor="middle" class="s">outer-loop cost ≈ $0.45</text>
+  <path d="M208,87 H236" class="flow" marker-end="url(#ah)"/>
+  <path d="M424,87 H452" class="flow" marker-end="url(#ah)"/>
+  <path d="M640,87 H668" class="flow" marker-end="url(#ah)"/>
+  <path d="M774,130 V165 H120 V226" class="flow" marker-end="url(#ah)"/>
+  <text x="450" y="161" text-anchor="middle" class="s">M(k+1) goes into the next run's master system prompt and stays fixed for the run</text>
+
+  <rect x="8" y="176" width="884" height="470" rx="8" class="band"/>
+  <text x="878" y="197" text-anchor="end" class="bandlabel">Inner loop: one run (6 h, one container)</text>
+
+  <rect x="22" y="228" width="196" height="158" rx="6" class="llm"/>
+  <text x="120" y="253" text-anchor="middle" class="t">Master (leader)</text>
+  <text x="120" y="276" text-anchor="middle" class="s">system prompt holds M</text>
+  <text x="120" y="294" text-anchor="middle" class="s">(assignment + communication)</text>
+  <text x="120" y="318" text-anchor="middle" class="s">tools: spawn, message,</text>
+  <text x="120" y="336" text-anchor="middle" class="s">task board, read-only view</text>
+  <text x="120" y="360" text-anchor="middle" class="s">writes no code</text>
+
+  <rect x="302" y="206" width="300" height="356" rx="8" class="group"/>
+  <text x="452" y="227" text-anchor="middle" class="t">Relay (deterministic program)</text>
+  <rect x="316" y="238" width="272" height="56" rx="5" class="data"/>
+  <text x="452" y="261" text-anchor="middle" class="t">Policy store</text>
+  <text x="452" y="281" text-anchor="middle" class="s">one per worker: rules + notes, versioned</text>
+  <rect x="316" y="304" width="272" height="56" rx="5" class="prog"/>
+  <text x="452" y="327" text-anchor="middle" class="t">Rule engine</text>
+  <text x="452" y="347" text-anchor="middle" class="s">event → reminder → check recipient, fields</text>
+  <rect x="316" y="370" width="272" height="50" rx="5" class="data"/>
+  <text x="452" y="391" text-anchor="middle" class="t">Board (BOARD:)</text>
+  <text x="452" y="409" text-anchor="middle" class="s">visible to everyone, append-only</text>
+  <rect x="316" y="430" width="272" height="50" rx="5" class="data"/>
+  <text x="452" y="451" text-anchor="middle" class="t">Lessons (LESSON:)</text>
+  <text x="452" y="469" text-anchor="middle" class="s">master only</text>
+  <rect x="316" y="490" width="272" height="60" rx="5" class="prog"/>
+  <text x="452" y="513" text-anchor="middle" class="t">Stop hook + check-ins</text>
+  <text x="452" y="533" text-anchor="middle" class="s">stops the master from ending early</text>
+
+  <rect x="676" y="206" width="202" height="356" rx="8" class="lgroup"/>
+  <text x="777" y="227" text-anchor="middle" class="t">Workers</text>
+  <text x="777" y="244" text-anchor="middle" class="s">each in its own git worktree</text>
+  <rect x="688" y="256" width="178" height="54" rx="5" class="llm"/>
+  <text x="777" y="278" text-anchor="middle" class="t">core</text>
+  <text x="777" y="297" text-anchor="middle" class="s">AST + Markdown I/O</text>
+  <rect x="688" y="318" width="178" height="54" rx="5" class="llm"/>
+  <text x="777" y="340" text-anchor="middle" class="t">readers4</text>
+  <text x="777" y="359" text-anchor="middle" class="s">writes readers/html.py only</text>
+  <rect x="688" y="380" width="178" height="54" rx="5" class="llm"/>
+  <text x="777" y="402" text-anchor="middle" class="t">verify</text>
+  <text x="777" y="421" text-anchor="middle" class="s">builds held-out cases</text>
+  <rect x="688" y="442" width="178" height="54" rx="5" class="llm"/>
+  <text x="777" y="464" text-anchor="middle" class="t">integrator</text>
+  <text x="777" y="483" text-anchor="middle" class="s">sole writer of the delivery</text>
+  <text x="777" y="521" text-anchor="middle" class="s">… 32–71 spawned per run</text>
+  <text x="777" y="539" text-anchor="middle" class="s">at most 16 active at once</text>
+
+  <path d="M218,266 H314" class="flow" marker-end="url(#ah)"/>
+  <path d="M588,262 H674" class="flow" marker-end="url(#ah)"/>
+  <path d="M588,332 H674" class="flow" marker-end="url(#ah)"/>
+  <path d="M676,395 H590" class="flow" marker-end="url(#ah)"/>
+  <path d="M676,455 H590" class="flow" marker-end="url(#ah)"/>
+  <path d="M316,455 H260" class="flow"/>
+  <path d="M316,520 H260 V352 H220" class="flow" marker-end="url(#ah)"/>
+  <path d="M777,562 V588 H120 V388" class="flow" marker-end="url(#ah)"/>
+  <text x="470" y="582" text-anchor="middle" class="s">messages and reports: to the master, or to other workers</text>
+  <path d="M840,562 V602" class="flow" marker-end="url(#ah)"/>
+  <rect x="22" y="604" width="856" height="30" rx="5" class="data"/>
+  <text x="450" y="624" text-anchor="middle">Delivery repo (integrator merges) → exported at the end → official evaluator (pandoc: 5,214 hidden tests)</text>
+  <path d="M22,619 H14 V140 H60 V132" class="flow" marker-end="url(#ah)"/>
+
+  <g class="num"><circle cx="266" cy="266" r="9"/><text x="266" y="270">1</text></g>
+  <g class="num"><circle cx="631" cy="262" r="9"/><text x="631" y="266">2</text></g>
+  <g class="num"><circle cx="631" cy="332" r="9"/><text x="631" y="336">3</text></g>
+  <g class="num"><circle cx="310" cy="588" r="9"/><text x="310" y="592">4</text></g>
+  <g class="num"><circle cx="633" cy="425" r="9"/><text x="633" y="429">5</text></g>
+  <g class="num"><circle cx="260" cy="420" r="9"/><text x="260" y="424">6</text></g>
+  <g class="num"><circle cx="858" cy="583" r="9"/><text x="858" y="587">7</text></g>
+  <g class="num"><circle cx="14" cy="400" r="9"/><text x="14" y="404">8</text></g>
+
+  <rect x="22" y="656" width="16" height="12" rx="2" class="llm"/><text x="44" y="666" class="s">LLM role</text>
+  <rect x="122" y="656" width="16" height="12" rx="2" class="prog"/><text x="144" y="666" class="s">program (no model calls)</text>
+  <rect x="306" y="656" width="16" height="12" rx="2" class="data"/><text x="328" y="666" class="s">data (kept per run, read by the outer loop)</text>
+  <g class="num"><circle cx="604" cy="662" r="8"/><text x="604" y="666">n</text></g><text x="618" y="666" class="s">step number, see the README</text>
+</svg>

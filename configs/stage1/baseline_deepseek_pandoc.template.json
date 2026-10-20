@@ -1,0 +1,55 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "Local preparation for independent baseline B rounds: Pandoc, Single versus saved fresh-P0 Team in global mode, six hours per arm. Rendering or writing this profile does not authorize deployment or execution. No optimizer, reviewer, evolution, automatic repetition, resume or adoption. The comparison runner's heldout label is administrative, not a blinded held-out claim.",
+  "tasks": [
+    {
+      "task_id": "jgm__pandoc.5caad90",
+      "path": "external/programbench-study/src/programbench/data/tasks/jgm__pandoc.5caad90",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "single",
+      "execution_mode": "single",
+      "policy_version": 0,
+      "assignment_policy_path": null,
+      "communication_policy_path": null
+    },
+    {
+      "name": "team_p0",
+      "execution_mode": "team",
+      "policy_version": 0,
+      "assignment_policy_path": "configs/stage1/policies/fresh_p0_20261001/assignment_v000.md",
+      "communication_policy_path": "configs/stage1/policies/fresh_p0_20261001/communication_v000.md"
+    }
+  ],
+  "provider_config": "configs/stage1/deepseek_flash.json",
+  "evolution_enabled": false,
+  "parallelism": 2,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "team_message_delivery": "between_tool_calls",
+    "runtime_disclosure": true,
+    "leader_loop_recovery": true,
+    "tool_call_cap": "disabled",
+    "role_policy_mode": "global",
+    "observation_interval_seconds": 60,
+    "stop_hook": {
+      "reason": "Time remaining: {remaining_seconds} seconds. Continue useful work on the task within your existing role permissions. Do not end the session solely because the current implementation appears complete: compare the delivered program with the reference executable on inputs and options you have not tried yet, and address the differences and remaining issues you find. When less than 900 seconds remain, stop starting new work; make sure the delivery builds with compile.sh and all completed work is in the delivery repository, then finish.",
+      "budget_notice": "The runtime will remind you to continue if you try to finish before the wall-time allowance expires. Use the remaining time for useful work within your existing role permissions."
+    }
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "runtime": "custom_Qwen_not_official_mini_SWE",
+  "limitations": "Saved human-written P0 is reused unchanged, not a new or evolved policy. Each rendered profile requests one paired round only. Provider settings are read from the referenced configuration at execution time and require separate validation. Shared wall-clock and resources do not imply equal tokens. Valid official zero scores and failed execution statuses are retained; missing evaluation remains unknown. B produces descriptive repetition data, not an acceptance threshold or an error-rate guarantee. S0, B and evolution each require their own authorization."
+}

@@ -1,0 +1,52 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "user_authorized_P3_vs_PB1_two_unseen_tasks",
+  "experiment_status": "user_stopped_for_api_maintenance_20260924",
+  "candidate_status": "experimental_not_adopted",
+  "restart_requires_new_user_authorization": true,
+  "tasks": [
+    {
+      "task_id": "chmln__sd.87d1ba5",
+      "path": "external/programbench-study/src/programbench/data/tasks/chmln__sd.87d1ba5",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    },
+    {
+      "task_id": "lz4__lz4.1519f46",
+      "path": "external/programbench-study/src/programbench/data/tasks/lz4__lz4.1519f46",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "p3",
+      "execution_mode": "team",
+      "policy_version": "P3",
+      "assignment_policy_path": "configs/stage1/policies/scorefix_p3/assignment_v003.md",
+      "communication_policy_path": "configs/stage1/policies/scorefix_p3/communication_v003.md"
+    },
+    {
+      "name": "pb1",
+      "execution_mode": "team",
+      "policy_version": "PB1",
+      "assignment_policy_path": "configs/stage1/policies/programbench_pb1/assignment_pb001.md",
+      "communication_policy_path": "configs/stage1/policies/programbench_pb1/communication_pb001.md"
+    }
+  ],
+  "provider_config": "configs/stage1/self_hosted_glm.json",
+  "evolution_enabled": false,
+  "parallelism": 2,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null
+  },
+  "evaluation": {"docker_cpus": 10},
+  "selection": {
+    "basis": "functional_variety_without_scores_or_hidden_tests",
+    "excluded_seen_tasks": ["tomnomnom__gron.88a6234", "sharkdp__fd.40d8eb3"],
+    "policy_updated_from_heldout": false,
+    "candidate_auto_adopted": false
+  }
+}

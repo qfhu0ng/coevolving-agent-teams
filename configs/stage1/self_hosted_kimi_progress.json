@@ -1,0 +1,15 @@
+{
+  "model": "moonshotai/Kimi-K3",
+  "base_url": "https://api.yi-sun.dev/v1",
+  "api_key_env": "STAGE1_GLM_API_KEY",
+  "max_output_tokens": 65536,
+  "request_timeout_seconds": 1800,
+  "first_progress_timeout_seconds": 600,
+  "progress_idle_timeout_seconds": 600,
+  "inspection_max_output_tokens": 32768,
+  "stream_response": true,
+  "max_attempts": 11,
+  "retry_backoff_seconds": 1.0,
+  "extra_body": {},
+  "rates": null
+}

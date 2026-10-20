@@ -1,0 +1,7 @@
+task,run,strategy,hours,official_passed,official_valid,pass_rate_percent,workers_spawned,known_cost_usd,note
+pandoc,batch 1 Single,single agent,6,,5214,,0,5.5,no official score: two infinite loops in the delivered code made the official test branches time out
+pandoc,batch 1 Team,M0,6,2829,5214,54.26,71,31.05,
+pandoc,M1 first run (batch 2),M1,4,3185,5214,61.09,42,68.81,stopped at 4 h when the API balance ran out; scored after cleanup was confirmed
+pandoc,M1 rerun,M1,6,2835,5214,54.37,32,25.7,scored after cleanup was confirmed
+ctags,batch 1 Single,single agent,6,269,2258,11.91,0,5.9,
+ctags,batch 1 Team,M0,6,301,2258,13.33,52,15.61,

@@ -1,0 +1,63 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "user_decided_five_hardest_tasks_from_Agensh_paper_single_vs_P3_with_master_read_only_inspection_and_30min_checkins",
+  "experiment_status": "stopped_by_user_20260928",
+  "experiment_record": "runs/stage1_glm_programbench_agensh5_checkin_20260928/START.md",
+  "launch_requires_new_user_authorization": true,
+  "task_selection": {
+    "source": "Agensh (arXiv 2609.26781, 2026-09-22): five most difficult ProgramBench tasks by mean SOTA test-pass rate",
+    "leaderboard_reference_mini_swe_single_agent": {
+      "ffmpeg__ffmpeg.360a402": {"tests": 3041, "best": 0.081, "glm_5_2": 0.068},
+      "gromacs__gromacs.665ea4c": {"tests": 1234, "best": 0.125, "glm_5_2": 0.074},
+      "jgm__pandoc.5caad90": {"tests": 5214, "best": 0.291, "glm_5_2": 0.084},
+      "php__php-src.c891263": {"tests": 14288, "best": 0.178, "glm_5_2": 0.0, "note": "floor risk: GLM-5.2 and Opus 5 both 0.0%"},
+      "universal-ctags__ctags.243595e": {"tests": 2258, "best": 0.190, "glm_5_2": 0.047}
+    },
+    "excluded_seen_tasks": ["tomnomnom__gron.88a6234", "sharkdp__fd.40d8eb3", "chmln__sd.87d1ba5", "lz4__lz4.1519f46"]
+  },
+  "tasks": [
+    {"task_id": "ffmpeg__ffmpeg.360a402", "path": "external/programbench-study/src/programbench/data/tasks/ffmpeg__ffmpeg.360a402", "instructions": "configs/stage1/programbench_instruction.md"},
+    {"task_id": "gromacs__gromacs.665ea4c", "path": "external/programbench-study/src/programbench/data/tasks/gromacs__gromacs.665ea4c", "instructions": "configs/stage1/programbench_instruction.md"},
+    {"task_id": "jgm__pandoc.5caad90", "path": "external/programbench-study/src/programbench/data/tasks/jgm__pandoc.5caad90", "instructions": "configs/stage1/programbench_instruction.md"},
+    {"task_id": "php__php-src.c891263", "path": "external/programbench-study/src/programbench/data/tasks/php__php-src.c891263", "instructions": "configs/stage1/programbench_instruction.md"},
+    {"task_id": "universal-ctags__ctags.243595e", "path": "external/programbench-study/src/programbench/data/tasks/universal-ctags__ctags.243595e", "instructions": "configs/stage1/programbench_instruction.md"}
+  ],
+  "arms": [
+    {
+      "name": "single",
+      "execution_mode": "single",
+      "policy_version": "none",
+      "assignment_policy_path": null,
+      "communication_policy_path": null
+    },
+    {
+      "name": "p3_master_readonly_checkin",
+      "execution_mode": "team",
+      "policy_version": "P3",
+      "assignment_policy_path": "configs/stage1/policies/scorefix_p3/assignment_v003.md",
+      "communication_policy_path": "configs/stage1/policies/scorefix_p3/communication_v003.md",
+      "runtime_requirement": "Master has read_file/glob/grep_search and runtime team check-ins every 1800 seconds. Native launch.json records master_tools and team_checkin. P3 texts unchanged; no automatic scaling."
+    }
+  ],
+  "provider_config": "configs/stage1/self_hosted_glm.json",
+  "evolution_enabled": false,
+  "parallelism": 2,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "resource_scope": "whole_task_shared_by_all_agents",
+    "step_scope": "all_roles_and_purposes_metered_without_logical_call_cap"
+  },
+  "evaluation": {"docker_cpus": 10, "timeouts": "official_per_step", "separate_environment": true},
+  "analysis_plan": {
+    "per_test_diff": "compare single vs team on identical test identities, grouped by test module (see tmp/depgraph/pb_remote_tests.py)",
+    "mechanism_metrics": "ownership cut vs balanced optimum, communication congruence, behaviour-profile divergence (tmp/depgraph/pb_analyze.py, differentiation.py)",
+    "master_inspection_check": "count master read_file/glob/grep_search calls before its first agent spawn"
+  },
+  "runtime": "custom_Qwen_single_or_team_not_mini_swe_agent",
+  "team_step_mapping": "experiment_mapping_not_an_official_multi_agent_protocol"
+}

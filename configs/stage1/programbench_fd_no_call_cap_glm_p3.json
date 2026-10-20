@@ -1,0 +1,32 @@
+{
+  "benchmark": "ProgramBench",
+  "task_id": "sharkdp__fd.40d8eb3",
+  "purpose": "user_authorized_fd_pair_without_logical_call_cap",
+  "execution_modes": [
+    "single",
+    "team"
+  ],
+  "runs_per_mode": 1,
+  "policy_version": "P3",
+  "assignment_policy_path": "configs/stage1/policies/scorefix_p3/assignment_v003.md",
+  "communication_policy_path": "configs/stage1/policies/scorefix_p3/communication_v003.md",
+  "provider_config": "configs/stage1/self_hosted_glm.json",
+  "evolution_enabled": false,
+  "inference": {
+    "agent_timeout_sec": 21600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "resource_scope": "whole_task_shared_by_all_agents",
+    "step_scope": "all_roles_and_purposes_metered_without_logical_call_cap"
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "reference_configuration": "https://github.com/SWE-agent/mini-swe-agent/blob/main/src/minisweagent/config/benchmarks/programbench.yaml",
+  "runtime": "custom_Qwen_single_or_team_not_mini_swe_agent",
+  "team_step_mapping": "experiment_mapping_not_an_official_multi_agent_protocol"
+}

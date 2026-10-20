@@ -1,0 +1,32 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.venv-miniswe/
+venv/
+.env
+.env.*
+*.key
+
+# Experiment outputs
+runs/
+outputs/
+logs/
+*.jsonl
+
+# Local third-party worktrees and runtime dependencies
+external/
+
+# Local working material: papers, reports, figures, research notes, scratch output and
+# historical documentation. Only current plans, interfaces and design notes are tracked.
+papers/
+local_docs/
+research_notes/
+output/
+tmp/

@@ -1,0 +1,43 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "Task-bound S0 profile for DeepSeek Flash, mode propose. Observes role-policy convention use, rejection/correction, injection size, cache reporting and runtime health; not a task-quality or policy-effect comparison. Selected public task: jgm__pandoc.5caad90. This local binding does not authorize deployment, real model calls or execution. No Single, optimizer, reviewer, evolution, resume or automatic rerun.",
+  "tasks": [
+    {
+      "task_id": "jgm__pandoc.5caad90",
+      "path": "external/programbench-study/src/programbench/data/tasks/jgm__pandoc.5caad90",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "team_p0_propose",
+      "execution_mode": "team",
+      "policy_version": 0,
+      "assignment_policy_path": "configs/stage1/policies/fresh_p0_20261001/assignment_v000.md",
+      "communication_policy_path": "configs/stage1/policies/fresh_p0_20261001/communication_v000.md"
+    }
+  ],
+  "provider_config": "configs/stage1/deepseek_flash.json",
+  "evolution_enabled": false,
+  "parallelism": 1,
+  "inference": {
+    "agent_timeout_sec": 3600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "team_message_delivery": "between_tool_calls",
+    "runtime_disclosure": true,
+    "leader_loop_recovery": true,
+    "tool_call_cap": "disabled",
+    "role_policy_mode": "propose"
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "runtime": "custom_Qwen_not_official_mini_SWE",
+  "limitations": "The public task jgm__pandoc.5caad90 is bound for S0 mechanism observation only; this is not a formal task-quality experiment. Saved human-written fresh P0 A/C are reused unchanged. On 2026-10-14 the user approved replacing the former P1 fixture with P0 as an S0 running-condition change: propose/global S0 are one-hour rehearsals for the corresponding six-hour first-round Team configurations, not effect comparisons. The shared non-PTY shell repair retains native exit/cancellation semantics and waits for close or a 200 ms drain timer; all arms use the same repair. The timer is not a strict wall-clock bound or a guarantee of complete background-descendant output. Current source removes the fixed Team worker-count cap while preserving shared resources and safety boundaries. The referenced DS profile uses streaming with explicit thinking enabled and reasoning_effort=high, a shared logical deadline of 1800 seconds including all retries/backoff, 300-second first-progress and progress-idle limits, max_attempts=3 and retry_backoff_seconds=1.0. Semantic reasoning/content/tool-argument progress renews only the idle timer; keep-alives do not count. This retains the 65536-token output limit and does not adopt the prior Kimi 11-attempt regime. These DS settings have not been validated by a real agent run. Zero-API scripted smoke overrides the provider and does not validate DS service, cache hits, billing or real-model compliance. Real calls, cache probing and formal runs require separate authorization. One-hour S0 scores, if later collected, are not comparable with earlier six-hour scores. Missing usage/cache remains unknown; no total token/fee cap."
+}

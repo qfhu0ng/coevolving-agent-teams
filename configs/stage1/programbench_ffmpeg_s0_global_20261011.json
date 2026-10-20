@@ -1,0 +1,43 @@
+{
+  "benchmark": "ProgramBench",
+  "purpose": "S0 short run of the role-policy harness, mode global (docs/stage1_role_policy_harness_plan_20261009.md, S0 and 3.3.1). Observes whether a real model uses the control-message convention (spawn markers, GLOBAL-POLICY broadcasts), rejection and correction, injection size and prompt-cache reporting. Not an effect comparison and not a score study. One Team run; no Single arm, optimizer, reviewer, evolution, resume or automatic rerun.",
+  "tasks": [
+    {
+      "task_id": "ffmpeg__ffmpeg.360a402",
+      "path": "external/programbench-study/src/programbench/data/tasks/ffmpeg__ffmpeg.360a402",
+      "instructions": "configs/stage1/programbench_instruction.md"
+    }
+  ],
+  "arms": [
+    {
+      "name": "team_p1_global",
+      "execution_mode": "team",
+      "policy_version": 1,
+      "assignment_policy_path": "configs/stage1/policies/kimi_p1_20261001/assignment_v001.md",
+      "communication_policy_path": "configs/stage1/policies/kimi_p1_20261001/communication_v001.md"
+    }
+  ],
+  "provider_config": "configs/stage1/self_hosted_kimi_progress.json",
+  "evolution_enabled": false,
+  "parallelism": 1,
+  "inference": {
+    "agent_timeout_sec": 3600,
+    "cpus": 20,
+    "memory_mb": 61440,
+    "memory_swap_mb": 61440,
+    "max_model_calls": null,
+    "team_checkin_seconds": 1800,
+    "team_message_delivery": "between_tool_calls",
+    "runtime_disclosure": true,
+    "leader_loop_recovery": true,
+    "tool_call_cap": "disabled",
+    "role_policy_mode": "global"
+  },
+  "evaluation": {
+    "docker_cpus": 10,
+    "timeouts": "official_per_step",
+    "separate_environment": true
+  },
+  "runtime": "custom_Qwen_not_official_mini_SWE",
+  "limitations": "One hour instead of six. The saved P1 A/C, provider, resources and runtime switches carry over from the 2026-10-03 run; the code is not the same, since it adds the role-policy mechanism (injection, control messages, ledger, compat records). Short runs show convention use and failure modes, not task outcomes; the official evaluation still runs and its score is not comparable with six-hour runs. Missing usage and missing cache fields stay unknown; prices are not configured."
+}
